@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, sans-serif;
+    background-image: url(fundo-de-papel-de-parede-colorido-embacado-artistico_58702-8222.avif);
+    background-size: cover;
+}
+header{
+    text-align: center;
+    background-color: rgba(124, 173, 82, 0.727);
+    padding: 10px 0;
+    color: azure;
+}
+.container{
+    background-color: rgba(157, 214, 108, 0.727);
+    display: flex;
+    align-items: center;
+    max-width: 1200px ;
+    margin: 0px auto;
+    padding: 0 20px;
+    justify-content: space-between;
+}
+nav ul{
+    background-color: rgba(242, 255, 0, 0);
+    color: aliceblue;
+    display: flex;
+    list-style: none;
+}
+nav ul li{
+   margin-left: 20px;
+}
+nav ul li a{
+    color: azure;
+    text-decoration: none;
+}
+.phone{
+    background-color: rgb(118, 160, 107);
+    color: azure;
+    padding: 5px 10px;
+    border-radius: 20px
+}
+.welcome-selection{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: linear-gradient(to right, rgb(206, 252, 156), rgb(167, 166, 166));
+    padding: 30px 0;
+    border-radius: 20px;
+    max-width: 1200px;
+    margin: 30px auto;
+    position: relative;
+}
+.status{
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+.texto{
+    font-size: 1.5em;
+    margin-bottom: 2px;
+}
+.imge{
+    width: 1865px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+}
+.imge .imagem2{
+    border-radius: 20px
+
+}

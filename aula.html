@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th{
+            background-color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <h2><b>Esqueleto CRUD</b></h2>
+
+    <form id="formulario">
+        <input type="text" id="nome" placeholder="Nome" required>
+        <input type="date" id="datadenascimento" required>
+        <input type="email" id="email" placeholder="E-mail" required>
+        <button type="submit">Adcionar</button>
+    </form>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Data</th>
+                <th>E-mail</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+            <tbody id="corpotable"></tbody>
+    </table>
+
+    <script>
+        let pessoas = []
+        document.getElementById('formulario').addEventListener('submit', function(evento) ({
+            evento.preventDefault();
+            adicionarPessoa();
+        });
+
+        function renderizartabela() {
+            const corpotable = document.getElementById('corpotable');
+            corpotable.innerHTML
+
+            pessoas.forEach(pessoas, indice) => {
+                const linha = document.createElement('tr');
+
+                const celulaNome = document.createElement('td');
+                celulaNome.textContent = pessoas.nome;
+                linha.appendChild(celulaNome);
+
+                const celulaDatadenascimento = document.createElement('td')
+                celulaDatadenascimento.textContent = pessoas.datadenascimento;
+                linha.appendChild(celulaDatadenascimento);
+
+                const celulaEmail = document.createElement('td');
+                celulaEmail.textContent = pessoas.email;
+                linha.appendChild(celulaEmail);
+
+                const celulaAcoes = document.createElement('td')
+
+                const botaoEditar = document.createElement('button');
+                botaoEditar.textContent = 'Editar';
+                botaoEditar.onclick = () => editarPessoas(indice);
+                celulaAcoes. appendChild(botaoEditar)
+
+                const botaoExcluir = document.createElement('button');
+                botaoExcluir.textContent = 'Ecluir';
+                botaoExcluir.onclick = () => excluirPessoas(indice);
+                celulaAcoes. appendChild(botaoExcluir);
+
+                linha.appendChild(celulaAcoes);
+                corpotable.appendChild(linha);
+            }
+        }
+
+    function adicionarPessoa() {
+        const nome = document.getElementById('nome').value.trim;
+        const datadenascimento = document.getElementById('datadeNascimento').value;
+        const email = document.getElementById('email').value;
+
+        if (nome && datadenascimento && email) {
+            pessoas.push({nome, datadenascimento, email});
+            document.getElementById('formulario').reset();
+            renderizartabela();
+        } else {
+            alert('preencha todos os campos!');
+        }
+    }
+
+    function editarPessoas(indice) {
+        const pessoa = pessoas[indice];
+        const novoNome = prompt('Editar a data de nascimento:', pessoa.datadenascimento);
+        const novadatadenascimento = prompt('Editar a data de nascimento:', pessoa.datadenascimento);
+        const novoemail = prompt('Editar o email:', pessoa.email);
+
+        if ( novoNome && novadatadenascimento && novoemail) {
+            pessoas [indice] = (nome: novoNome, datadeNascimento: novadatadenascimento, email: novoemail);
+            renderizartabela();
+        }
+    }
+
+    function excluirPessoas(indice) {
+        if  
+    }
+
+    </script>
+
+
+</body>
+</html>

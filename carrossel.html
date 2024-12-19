@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="carrosel.css">
+    <title>Carrossel de Imagens</title>
+ 
+</head>
+<body>
+    <h3>Carrossel de Imagens</h3>
+    <div class="carrossel-container">
+        <img src="tite.jfif" class="imagem ativo" alt="Imagem 1">
+        <img src="felipinho.jfif" class="imagem" alt="Imagem 2">
+        <img src="flamengo-campeao-scaled (1).jpg" class="imagem" alt="Imagem 3">
+    </div>
+
+    <div class="controles">
+        <button class="botao" onclick="mostrarImagem(-1)">Anterior</button>
+        <button class="botao" onclick="mostrarImagem(1)">Próxima</button>
+    </div>
+
+    <div class="indicadores">
+        <span class="indicador" onclick="mudarImagem(0)"></span>
+        <span class="indicador" onclick="mudarImagem(1)"></span>
+        <span class="indicador" onclick="mudarImagem(2)"></span>
+    </div>
+
+    <footer>
+        <div class="rodape">
+        <div class="rodape1">
+            <p class="p1"> Desenvolvido por Luiz </p>
+            <p class="p1"> Endereço Gama-df</p>
+            <p class="p1"> telefone: 77 7777-7777</p>
+        </div>
+    </footer>
+
+    <script>
+        let indiceAtual = 0;
+        const imagens = document.getElementsByClassName('imagem');
+        const indicadores = document.getElementsByClassName('indicador');
+
+        function mostrarImagem(direcao) {
+            imagens[indiceAtual].classList.remove('ativo');
+            indicadores[indiceAtual].classList.remove('ativo');
+            indiceAtual = (indiceAtual + direcao + imagens.length) % imagens.length;
+            imagens[indiceAtual].classList.add('ativo');
+            indicadores[indiceAtual].classList.add('ativo');
+        }
+
+        function mudarImagem(indice) {
+            mostrarImagem(indice - indiceAtual);
+        }
+
+        //automática a cada 5 segundos
+        setInterval(function() {
+            mostrarImagem(1);
+        }, 5000);
+    </script>
+</body>
+</html>

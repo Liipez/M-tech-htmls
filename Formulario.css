@@ -1,0 +1,40 @@
+body{
+    background-image: url(pexels-hngstrm-1939485.jpg);
+    text-align: center;
+    background-size: cover;
+}
+h1{
+    color: rgb(0, 0, 0);
+    font-size: 320%;
+}
+
+h2{
+    color: black;
+    font-size: 180%;
+}
+div{
+    color: rgb(247, 247, 247);
+}
+label{
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+}
+div{
+    box-sizing: border-box;
+}
+h4{
+    color: white;
+}
+form{
+    border-radius: 20px;
+    margin: auto;
+    display: inline-block;
+    max-width: 400px;
+    padding: 50px;
+    background-color: rgba(210, 187, 231, 0.699);
+    box-shadow: 0 0 2px black;
+}
+input{
+    border-radius: 80px;
+    border-color: rgba(174, 0, 255, 0.336);
+}

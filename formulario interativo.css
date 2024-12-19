@@ -1,0 +1,51 @@
+body{
+    background-image: url(pexels-photo-4862876.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+h2{
+    color: black;
+    font-size: 190%;
+}
+label{
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+}
+form{
+    border-radius: 20px;
+    margin: auto;
+    display: inline-block;
+    max-width: 400px;
+    padding: 90px;
+    background-color: rgba(211, 255, 243, 0.699);
+    box-shadow: 0 0 2px black;
+    border: aliceblue;
+}
+input{
+    border-radius: 80px;
+    border-color: rgba(0, 255, 140, 0.336);
+}
+button{
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 19px;
+    background-color: rgb(211, 255, 243);
+    border: none;
+}
+footer{
+    background-color: rgb(22, 29, 28);
+    color: rgb(255, 255, 255);
+    padding: 1px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    font-size: 14px;
+}
+.rodape1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}

@@ -1,0 +1,33 @@
+body{
+    background-image: url(Cardápio\ formato\ A4\ para\ Lanchonete.jpg)
+}
+
+h2{
+    text-align: center;
+    background-size: cover;
+    color: rgb(252, 206, 2);
+    margin-bottom: 20px;
+}
+
+h1{
+    text-align: center;
+    background-size: cover;
+    color: azure;
+    font-size: 50px;
+}
+h3{
+    text-align: center;
+    background-size: cover;
+    color: azure
+}
+ul{
+    text-align: center;
+    color: rgb(255, 238, 0);
+    list-style: none;
+}
+p{
+    color: azure;
+}
+strong{
+    color: azure;
+}

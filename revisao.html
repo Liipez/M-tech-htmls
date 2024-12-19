@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="revisao.css">
+</head>
+<body>
+    <div class="titulo">
+    <h1><b>Formulário revisão</b></h1>
+    </div>
+
+    <div class="container">
+        <h2><b> Formulario de informação revisão </b></h2>
+    </div>
+    <form>
+        <label for="nome">nome:</label>
+        <input type="text" id="nome" name="nome" required><br><br>
+
+        <label for="sobrenome">sobrenome:</label>
+        <input type="text" id="nome" name="nome" required><br><br>
+
+        <label for="idade">Idade:</label>
+        <input type="number" id="number" name="idade" required><br><br>
+
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" name="senha" required><br><br>
+
+        <div id="texto"></div>
+        <button onclick="mudartexto()"> Cadastro</button>
+    </form>
+
+    <script>
+        function mudartexto() {
+            document.getElementById("texto"). innerHTML = "Cadastro finalizado"
+        }
+    
+    </script>
+
+</body>
+</html>
